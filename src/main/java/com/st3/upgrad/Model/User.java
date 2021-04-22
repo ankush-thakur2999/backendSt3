@@ -5,9 +5,20 @@ import javax.persistence.*;
 @Entity
 @Table(name = "users")
 public class User {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private  long Id;
     @Column(name = "Username")
     private String Username;
+
+    public long getId() {
+        return Id;
+    }
+
+    public void setId(long id) {
+        Id = id;
+    }
+
     @Column(name = "Email")
     private  String Email;
     @Column(name = "number")
