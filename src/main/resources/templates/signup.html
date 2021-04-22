@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+
+    </head>
+    <body>
+     <form th:action="@{/signup_process}" method="post" th:object="${user}">
+         <label>Username</label>
+         <input type="text" th:field="*{Username}" required minlength="6" maxlength="20">
+         <label>Email</label>
+         <input type="text" th:field="*{Email}" required minlength="4" maxlength="50">
+         <label >Password</label>
+         <input type="password" th:field="*{password}" required minlength="8" maxlength="50">
+         <label >Phone Number</label>
+         <input type="number" th:field="*{number}" required minlength="10" maxlength="10">
+         <input type="submit" value="signup">
+
+     </form>
+    </body>
+</html>
