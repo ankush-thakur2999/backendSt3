@@ -36,9 +36,6 @@ public class UserController {
         return "register_success";
 
     }
-    @GetMapping("/dashboard")
-    public  String Dashboard(){
-        return "dashboard";
-    }
+
 
 }
